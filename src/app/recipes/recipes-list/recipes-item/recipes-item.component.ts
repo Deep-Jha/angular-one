@@ -8,11 +8,7 @@ import { Recipe } from '../../recipe.modal';
 })
 export class RecipesItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter<void>();
-  constructor() {}
+  @Input() index: number;
 
   ngOnInit(): void {}
-  onSelected() {
-    this.recipeSelected.emit();
-  }
 }
